@@ -1,0 +1,16 @@
+<resources>
+  <string name="app_name">PracticeDesign</string>
+  <string name="action_settings">Settings</string>
+
+  <!-- HINTS -->
+  <string name="hint_name">NOMBRE</string>
+  <string name="hint_lastname">APELLIDOS</string>
+  <string name="hint_age">EDAD</string>
+  <string name="hint_number_phone">TELEFONO</string>
+  <string name="hint_address">DIRECCIÓN</string>
+
+  <!-- LABEL -->
+  <string name="label_sex">Sexo:</string>
+  <string name="label_male">Masculino</string>
+  <string name="label_female">Femenino</string>
+</resources>

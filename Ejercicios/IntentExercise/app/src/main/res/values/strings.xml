@@ -1,0 +1,13 @@
+<resources>
+  <string name="app_name">IntentExercise</string>
+  <string name="action_settings">Settings</string>
+
+  <!--LABEL-->
+  <string name="label_name">Nombre:</string>
+  <string name="label_password">Contraseña:</string>
+  <string name="label_send">Enviar</string>
+
+  <!--HINT-->
+  <string name="hint_name">Nombre</string>
+  <string name="hint_password">Contraseña</string>
+</resources>
