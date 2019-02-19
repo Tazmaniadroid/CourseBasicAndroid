@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
   private String state=null;
   private String country=null;
 
-  private List<String> interest= new ArrayList<>();
+  private ArrayList<String> interest= new ArrayList<>();
 
   private CompoundButton.OnCheckedChangeListener interestOnCheckedChangeListener = new
       CompoundButton.OnCheckedChangeListener() {
@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
           detailIntent.putExtra("numberPhone",numberPhone);
           detailIntent.putExtra("email",email);
           detailIntent.putExtra("sex",sex);
-          detailIntent.putExtra("interest",interest.toArray());
+          detailIntent.putExtra("interest",interest);
           detailIntent.putExtra("state",state);
           detailIntent.putExtra("country",country);
           startActivity(detailIntent);
