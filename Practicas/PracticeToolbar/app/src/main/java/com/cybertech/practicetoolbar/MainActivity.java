@@ -1,15 +1,29 @@
 package com.cybertech.practicetoolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.cybertech.practicetoolbar.adapters.PersonAdapter;
+import com.cybertech.practicetoolbar.listeners.OnClickPersonListener;
+import com.cybertech.practicetoolbar.model.Person;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements OnClickPersonListener {
+
+  private RecyclerView personsRecyclerView=null;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +32,20 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
 
+    personsRecyclerView=findViewById(R.id.persons_recyclerView);
+    LinearLayoutManager layoutManager= new LinearLayoutManager(this,
+        LinearLayoutManager.VERTICAL,false);
+    personsRecyclerView.setHasFixedSize(true);
+    personsRecyclerView.setLayoutManager(layoutManager);
+    final PersonAdapter personAdapter = new PersonAdapter(getPersons());
+    personsRecyclerView.setAdapter(personAdapter);
+    personsRecyclerView.setLayoutFrozen(false);
+
     FloatingActionButton fab = findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-            .setAction("Action", null).show();
+        personAdapter.addPerson(57,"Josimar","Solano");
       }
     });
   }
@@ -44,9 +66,36 @@ public class MainActivity extends AppCompatActivity {
 
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings) {
+      Toast.makeText(getBaseContext(), "Settings", Toast.LENGTH_SHORT).show();
       return true;
     }
 
     return super.onOptionsItemSelected(item);
+  }
+
+  private List<Person> getPersons(){
+    List<Person> persons=new ArrayList<>();
+    persons.add(new Person(1,"Juan","Solis"));
+    persons.add(new Person(2,"Janeth","Solis"));
+    persons.add(new Person(3,"Jaive","Solis"));
+    persons.add(new Person(4,"Jose","Solis"));
+    persons.add(new Person(5,"Jorge","Solis"));
+    persons.add(new Person(6,"Jandra","Solis"));
+    persons.add(new Person(7,"Janitzia","Solis"));
+    persons.add(new Person(8,"Jacaranda","Solis"));
+    persons.add(new Person(9,"Jaro","Solis"));
+    persons.add(new Person(10,"Jenma","Solis"));
+    persons.add(new Person(11,"Janta","Solis"));
+    persons.add(new Person(12,"Juanita","Solis"));
+
+    return persons;
+  }
+
+  @Override
+  public void onClickPerson(Person person) {
+    /*Intent detailIntent= new Intent(MainActivity.this,DetailActivity.class);
+    detailIntent.putExtra("Person",person);
+    startActivity(detailIntent);*/
+
   }
 }
