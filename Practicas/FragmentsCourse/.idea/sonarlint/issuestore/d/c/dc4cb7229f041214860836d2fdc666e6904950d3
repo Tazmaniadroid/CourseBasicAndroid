@@ -1,0 +1,7 @@
+
+Ksquid:S1185^"(Remove this method to simply inherit it.(ÀÚÑ¡ùÿÿÿÿ8½¬î¸˜-
+ysquid:S1450#"bRemove the "personsRecyclerView" field and declare it as a local variable in the relevant methods.(øÕßğ
+csquid:S1192i"GDefine a constant instead of duplicating this literal "Solis" 12 times.(€°©Øşÿÿÿÿ
+|squid:S1488+"`Immediately return this expression instead of assigning it to the temporary variable "fragment".(Ø†¼“øÿÿÿÿ
+Nsquid:S1135)"2Complete the task associated to this TODO comment.(ßíŠÿÿÿÿÿ
+Fsquid:S1185c"(Remove this method to simply inherit it.(ñ”Ò8Ê¾ñ¸˜-

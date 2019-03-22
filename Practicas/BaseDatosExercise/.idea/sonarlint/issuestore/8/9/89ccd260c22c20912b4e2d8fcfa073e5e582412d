@@ -1,0 +1,8 @@
+
+Œsquid:S1319F"nThe type of the "fields" object should be an interface such as "Map" rather than the implementation "HashMap".(ÈààŸ8š•ü½˜-
+_squid:S1126@"AReplace this if-then-else statement by a single return statement.(‡öÆ³8¨ ï½˜-
+Rsquid:S2864I"4Iterate over the "entrySet" instead of the "keySet".(Ÿå¦¥8Ü­„¾˜-
+dsquid:S1126["AReplace this if-then-else statement by a single return statement.(µ¢ÀÛøÿÿÿÿ8—›Ÿ¾˜-
+wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‡Ù…·8ÛÊé¿˜-
+dsquid:S1126N"AReplace this if-then-else statement by a single return statement.(Ú¹¿Õùÿÿÿÿ8¦®–¾˜-
+Nsquid:S1068"+Remove this unused "context" private field.(™„·úıÿÿÿÿ8©ì¡½˜-
