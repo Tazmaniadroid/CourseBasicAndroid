@@ -1,0 +1,5 @@
+
+rsquid:S1450	"[Remove the "nameTextView" field and declare it as a local variable in the relevant methods.(†ñó
+vsquid:S1450
+"_Remove the "passwordTextView" field and declare it as a local variable in the relevant methods.(ÏÓ¼
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(€úñí

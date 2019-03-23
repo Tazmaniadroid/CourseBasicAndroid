@@ -3,7 +3,9 @@ package com.cybertch.basedatosexercise.databases;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.TextUtils;
 
 import com.cybertch.basedatosexercise.models.Contact;
 
@@ -56,7 +58,6 @@ public class BDHelper {
 
     public boolean insert(Contact contact) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(ID, contact.getId());
         contentValues.put(NAME, contact.getName());
         contentValues.put(LASTNAME, contact.getLastname());
         contentValues.put(NUMBERPHONE, contact.getNumberPhone());

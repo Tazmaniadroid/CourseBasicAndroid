@@ -19,7 +19,8 @@ import android.support.annotation.Nullable;
  **/
 public class Database extends SQLiteOpenHelper {
 
-    private static final String QUERY_USER="CREATE TABLE contacts(id INTEGER PRIMARY KEY," +
+    private static final String QUERY_USER="CREATE TABLE contacts(id INTEGER PRIMARY KEY " +
+            "AUTOINCREMENT," +
             "name VARCHAR(100),lastname VARCHAR(100),numberPhone VARCHAR(10))";
     private static final String QUERY_USER_DELETE="DROP TABLE IF EXISTS contacts";
 
